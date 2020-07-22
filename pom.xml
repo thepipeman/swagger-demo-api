@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.pipecrafts</groupId>
+  <artifactId>swagger-demo-api</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <properties>
+    <java.version>11</java.version>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+
+    <spec.file>${project.basedir}/src/main/resources/swagger.json</spec.file>
+    <!--    <sdk.output>generated-sdk</sdk.output>-->
+    <generated-sources-path>${project.build.directory}/generated-sources</generated-sources-path>
+    <generated-sources-java-path>src/main/java</generated-sources-java-path>
+    <openapi-generator.version>4.3.1</openapi-generator.version>
+  </properties>
+
+  <build>
+    <plugins>
+
+      <plugin>
+        <groupId>org.openapitools</groupId>
+        <artifactId>openapi-generator-maven-plugin</artifactId>
+        <version>4.3.1</version>
+        <executions>
+          <execution>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+            <configuration>
+
+              <inputSpec>${project.basedir}/src/main/resources/swagger.json</inputSpec>
+              <generatorName>java</generatorName>
+              <apiPackage>com.pipecrafts.api</apiPackage>
+              <modelPackage>com.pipecrafts.model</modelPackage>
+              <invokerPackage>com.pipecrafts.invoker</invokerPackage>
+
+              <configOptions>
+                <sourceFolder>src/gen/java/main</sourceFolder>
+                <dateLibrary>java8-localdatetime</dateLibrary>
+                <library>resttemplate</library>
+                <hideGenerationTimestamp>true</hideGenerationTimestamp>
+                <serializableModel>true</serializableModel>
+              </configOptions>
+
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

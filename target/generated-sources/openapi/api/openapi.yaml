@@ -1,0 +1,350 @@
+openapi: 3.0.1
+info:
+  contact: {}
+  description: Api Documentation
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0
+  termsOfService: urn:tos
+  title: Api Documentation
+  version: "1.0"
+servers:
+- url: //localhost:9000/
+tags:
+- description: Basic Error Controller
+  name: basic-error-controller
+- description: Trip Controller
+  name: trip-controller
+paths:
+  /api/error:
+    delete:
+      operationId: errorUsingDELETE
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                additionalProperties:
+                  properties: {}
+                  type: object
+                type: object
+          description: OK
+        "204":
+          content: {}
+          description: No Content
+        "401":
+          content: {}
+          description: Unauthorized
+        "403":
+          content: {}
+          description: Forbidden
+      summary: error
+      tags:
+      - basic-error-controller
+      x-accepts: '*/*'
+    get:
+      operationId: errorUsingGET
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                additionalProperties:
+                  properties: {}
+                  type: object
+                type: object
+          description: OK
+        "401":
+          content: {}
+          description: Unauthorized
+        "403":
+          content: {}
+          description: Forbidden
+        "404":
+          content: {}
+          description: Not Found
+      summary: error
+      tags:
+      - basic-error-controller
+      x-accepts: '*/*'
+    head:
+      operationId: errorUsingHEAD
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                additionalProperties:
+                  properties: {}
+                  type: object
+                type: object
+          description: OK
+        "204":
+          content: {}
+          description: No Content
+        "401":
+          content: {}
+          description: Unauthorized
+        "403":
+          content: {}
+          description: Forbidden
+      summary: error
+      tags:
+      - basic-error-controller
+      x-accepts: '*/*'
+    options:
+      operationId: errorUsingOPTIONS
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                additionalProperties:
+                  properties: {}
+                  type: object
+                type: object
+          description: OK
+        "204":
+          content: {}
+          description: No Content
+        "401":
+          content: {}
+          description: Unauthorized
+        "403":
+          content: {}
+          description: Forbidden
+      summary: error
+      tags:
+      - basic-error-controller
+      x-accepts: '*/*'
+    patch:
+      operationId: errorUsingPATCH
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                additionalProperties:
+                  properties: {}
+                  type: object
+                type: object
+          description: OK
+        "204":
+          content: {}
+          description: No Content
+        "401":
+          content: {}
+          description: Unauthorized
+        "403":
+          content: {}
+          description: Forbidden
+      summary: error
+      tags:
+      - basic-error-controller
+      x-accepts: '*/*'
+    post:
+      operationId: errorUsingPOST
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                additionalProperties:
+                  properties: {}
+                  type: object
+                type: object
+          description: OK
+        "201":
+          content: {}
+          description: Created
+        "401":
+          content: {}
+          description: Unauthorized
+        "403":
+          content: {}
+          description: Forbidden
+        "404":
+          content: {}
+          description: Not Found
+      summary: error
+      tags:
+      - basic-error-controller
+      x-accepts: '*/*'
+    put:
+      operationId: errorUsingPUT
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                additionalProperties:
+                  properties: {}
+                  type: object
+                type: object
+          description: OK
+        "201":
+          content: {}
+          description: Created
+        "401":
+          content: {}
+          description: Unauthorized
+        "403":
+          content: {}
+          description: Forbidden
+        "404":
+          content: {}
+          description: Not Found
+      summary: error
+      tags:
+      - basic-error-controller
+      x-accepts: '*/*'
+  /api/trips:
+    get:
+      operationId: getTripsUsingGET
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Trip'
+                type: array
+          description: OK
+        "401":
+          content: {}
+          description: Unauthorized
+        "403":
+          content: {}
+          description: Forbidden
+        "404":
+          content: {}
+          description: Not Found
+      summary: getTrips
+      tags:
+      - trip-controller
+      x-accepts: application/json
+components:
+  schemas:
+    ModelAndView:
+      properties:
+        empty:
+          type: boolean
+        model:
+          properties: {}
+          type: object
+        modelMap:
+          additionalProperties:
+            properties: {}
+            type: object
+          type: object
+        reference:
+          type: boolean
+        status:
+          enum:
+          - ACCEPTED
+          - ALREADY_REPORTED
+          - BAD_GATEWAY
+          - BAD_REQUEST
+          - BANDWIDTH_LIMIT_EXCEEDED
+          - CHECKPOINT
+          - CONFLICT
+          - CONTINUE
+          - CREATED
+          - DESTINATION_LOCKED
+          - EXPECTATION_FAILED
+          - FAILED_DEPENDENCY
+          - FORBIDDEN
+          - FOUND
+          - GATEWAY_TIMEOUT
+          - GONE
+          - HTTP_VERSION_NOT_SUPPORTED
+          - IM_USED
+          - INSUFFICIENT_SPACE_ON_RESOURCE
+          - INSUFFICIENT_STORAGE
+          - INTERNAL_SERVER_ERROR
+          - I_AM_A_TEAPOT
+          - LENGTH_REQUIRED
+          - LOCKED
+          - LOOP_DETECTED
+          - METHOD_FAILURE
+          - METHOD_NOT_ALLOWED
+          - MOVED_PERMANENTLY
+          - MOVED_TEMPORARILY
+          - MULTIPLE_CHOICES
+          - MULTI_STATUS
+          - NETWORK_AUTHENTICATION_REQUIRED
+          - NON_AUTHORITATIVE_INFORMATION
+          - NOT_ACCEPTABLE
+          - NOT_EXTENDED
+          - NOT_FOUND
+          - NOT_IMPLEMENTED
+          - NOT_MODIFIED
+          - NO_CONTENT
+          - OK
+          - PARTIAL_CONTENT
+          - PAYLOAD_TOO_LARGE
+          - PAYMENT_REQUIRED
+          - PERMANENT_REDIRECT
+          - PRECONDITION_FAILED
+          - PRECONDITION_REQUIRED
+          - PROCESSING
+          - PROXY_AUTHENTICATION_REQUIRED
+          - REQUESTED_RANGE_NOT_SATISFIABLE
+          - REQUEST_ENTITY_TOO_LARGE
+          - REQUEST_HEADER_FIELDS_TOO_LARGE
+          - REQUEST_TIMEOUT
+          - REQUEST_URI_TOO_LONG
+          - RESET_CONTENT
+          - SEE_OTHER
+          - SERVICE_UNAVAILABLE
+          - SWITCHING_PROTOCOLS
+          - TEMPORARY_REDIRECT
+          - TOO_EARLY
+          - TOO_MANY_REQUESTS
+          - UNAUTHORIZED
+          - UNAVAILABLE_FOR_LEGAL_REASONS
+          - UNPROCESSABLE_ENTITY
+          - UNSUPPORTED_MEDIA_TYPE
+          - UPGRADE_REQUIRED
+          - URI_TOO_LONG
+          - USE_PROXY
+          - VARIANT_ALSO_NEGOTIATES
+          type: string
+        view:
+          $ref: '#/components/schemas/View'
+        viewName:
+          type: string
+      title: ModelAndView
+      type: object
+    Trip:
+      example:
+        passengerName: passengerName
+        price: 6.027456183070403
+        origin: origin
+        destination: destination
+        departure: 2000-01-23T04:56:07.000+00:00
+        id: 0
+      properties:
+        departure:
+          format: date-time
+          type: string
+        destination:
+          type: string
+        id:
+          format: int64
+          type: integer
+        origin:
+          type: string
+        passengerName:
+          type: string
+        price:
+          type: number
+      title: Trip
+      type: object
+    View:
+      properties:
+        contentType:
+          type: string
+      title: View
+      type: object
+
