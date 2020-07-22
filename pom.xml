@@ -18,8 +18,77 @@
     <!--    <sdk.output>generated-sdk</sdk.output>-->
     <generated-sources-path>${project.build.directory}/generated-sources</generated-sources-path>
     <generated-sources-java-path>src/main/java</generated-sources-java-path>
+
+    <!--  plugins version -->
     <openapi-generator.version>4.3.1</openapi-generator.version>
+    <build-helper.version>3.2.0</build-helper.version>
+
+    <!--  Versions used by the generated SDK  -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <swagger-annotations-version>1.5.22</swagger-annotations-version>
+    <spring-web-version>4.3.9.RELEASE</spring-web-version>
+    <jackson-version>2.10.3</jackson-version>
+    <jackson-databind-version>2.10.3</jackson-databind-version>
+    <jackson-databind-nullable-version>0.2.1</jackson-databind-nullable-version>
   </properties>
+
+  <dependencies>
+
+    <!--  Used by the generated library  -->
+
+    <dependency>
+      <groupId>io.swagger</groupId>
+      <artifactId>swagger-annotations</artifactId>
+      <version>${swagger-annotations-version}</version>
+    </dependency>
+
+    <!-- @Nullable annotation -->
+    <dependency>
+      <groupId>com.google.code.findbugs</groupId>
+      <artifactId>jsr305</artifactId>
+      <version>3.0.2</version>
+    </dependency>
+
+    <!-- HTTP client: Spring RestTemplate -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>${spring-web-version}</version>
+    </dependency>
+
+    <!-- JSON processing: jackson -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>${jackson-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+      <version>${jackson-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson-databind-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.jaxrs</groupId>
+      <artifactId>jackson-jaxrs-json-provider</artifactId>
+      <version>${jackson-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openapitools</groupId>
+      <artifactId>jackson-databind-nullable</artifactId>
+      <version>${jackson-databind-nullable-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.datatype</groupId>
+      <artifactId>jackson-datatype-jsr310</artifactId>
+      <version>${jackson-version}</version>
+    </dependency>
+
+  </dependencies>
 
   <build>
     <plugins>
@@ -42,14 +111,39 @@
               <modelPackage>com.pipecrafts.model</modelPackage>
               <invokerPackage>com.pipecrafts.invoker</invokerPackage>
 
+              <groupId>${groupId}</groupId>
+              <artifactId>${artifactId}</artifactId>
+              <artifactVersion>${version}</artifactVersion>
+
               <configOptions>
-                <sourceFolder>src/gen/java/main</sourceFolder>
+                <sourceFolder>${generated-sources-java-path}</sourceFolder>
                 <dateLibrary>java8-localdatetime</dateLibrary>
                 <library>resttemplate</library>
                 <hideGenerationTimestamp>true</hideGenerationTimestamp>
                 <serializableModel>true</serializableModel>
               </configOptions>
 
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>${build-helper.version}</version>
+        <executions>
+          <!-- TODO for eclipse/m2e users: install the m2e connector 'buildhelper' by selecting 'Discover new m2e connectors' while hovering over the follwoing execution tag -->
+          <execution>
+            <id>add-generated-source</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>add-source</goal>
+            </goals>
+            <configuration>
+              <sources>
+                <source>${generated-sources-path}/openapi/${generated-sources-java-path}</source>
+              </sources>
             </configuration>
           </execution>
         </executions>

@@ -1,8 +1,8 @@
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 
-group = 'org.openapitools'
-version = '1.0'
+group = 'com.pipecrafts'
+version = '0.0.1-SNAPSHOT'
 
 buildscript {
     repositories {
@@ -84,7 +84,7 @@ if(hasProperty('target') && target == 'android') {
 
     install {
         repositories.mavenInstaller {
-            pom.artifactId = 'openapi-java-client'
+            pom.artifactId = 'swagger-demo-api'
         }
     }
     

@@ -1,0 +1,13 @@
+/home/pipeman/Workspace/playground/swagger-demo-api/target/generated-sources/openapi/src/main/java/com/pipecrafts/api/BasicErrorControllerApi.java
+/home/pipeman/Workspace/playground/swagger-demo-api/target/generated-sources/openapi/src/main/java/com/pipecrafts/invoker/auth/Authentication.java
+/home/pipeman/Workspace/playground/swagger-demo-api/target/generated-sources/openapi/src/main/java/com/pipecrafts/invoker/ServerVariable.java
+/home/pipeman/Workspace/playground/swagger-demo-api/target/generated-sources/openapi/src/main/java/com/pipecrafts/api/TripControllerApi.java
+/home/pipeman/Workspace/playground/swagger-demo-api/target/generated-sources/openapi/src/main/java/com/pipecrafts/invoker/ServerConfiguration.java
+/home/pipeman/Workspace/playground/swagger-demo-api/target/generated-sources/openapi/src/main/java/com/pipecrafts/invoker/ApiClient.java
+/home/pipeman/Workspace/playground/swagger-demo-api/target/generated-sources/openapi/src/main/java/com/pipecrafts/model/View.java
+/home/pipeman/Workspace/playground/swagger-demo-api/target/generated-sources/openapi/src/main/java/com/pipecrafts/invoker/auth/HttpBearerAuth.java
+/home/pipeman/Workspace/playground/swagger-demo-api/target/generated-sources/openapi/src/main/java/com/pipecrafts/invoker/RFC3339DateFormat.java
+/home/pipeman/Workspace/playground/swagger-demo-api/target/generated-sources/openapi/src/main/java/com/pipecrafts/invoker/auth/ApiKeyAuth.java
+/home/pipeman/Workspace/playground/swagger-demo-api/target/generated-sources/openapi/src/main/java/com/pipecrafts/model/Trip.java
+/home/pipeman/Workspace/playground/swagger-demo-api/target/generated-sources/openapi/src/main/java/com/pipecrafts/model/ModelAndView.java
+/home/pipeman/Workspace/playground/swagger-demo-api/target/generated-sources/openapi/src/main/java/com/pipecrafts/invoker/auth/HttpBasicAuth.java

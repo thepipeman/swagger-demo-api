@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3253a9c1-5255-41bb-8b70-8b8429fd2340" name="Default Changelist" comment="" />
+    <list default="true" id="3253a9c1-5255-41bb-8b70-8b8429fd2340" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/openapi/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/openapi/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/openapi/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/openapi/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/openapi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/openapi/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/openapi/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/openapi/settings.gradle" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1f1tMfdNfj3cGkeRWLBjZPqec4Z" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -16,6 +29,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
@@ -39,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595397379778</updated>
-      <workItem from="1595397380894" duration="653000" />
+      <workItem from="1595397380894" duration="1958000" />
     </task>
     <servers />
   </component>
@@ -55,5 +69,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1045" y="153" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1595398055578" />
+    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1595398668865">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1595398668865" />
   </component>
 </project>

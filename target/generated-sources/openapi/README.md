@@ -1,4 +1,4 @@
-# openapi-java-client
+# swagger-demo-api
 
 Api Documentation
 
@@ -38,9 +38,9 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>org.openapitools</groupId>
-  <artifactId>openapi-java-client</artifactId>
-  <version>1.0</version>
+  <groupId>com.pipecrafts</groupId>
+  <artifactId>swagger-demo-api</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -50,7 +50,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "org.openapitools:openapi-java-client:1.0"
+compile "com.pipecrafts:swagger-demo-api:0.0.1-SNAPSHOT"
 ```
 
 ### Others
@@ -63,7 +63,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/openapi-java-client-1.0.jar`
+- `target/swagger-demo-api-0.0.1-SNAPSHOT.jar`
 - `target/lib/*.jar`
 
 ## Getting Started
